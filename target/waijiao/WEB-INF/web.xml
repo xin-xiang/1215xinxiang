@@ -1,0 +1,76 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false</param-value>
+  </context-param>
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>sa</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>123456</param-value>
+  </context-param>
+
+
+  <servlet>
+    <servlet-name>Week2</servlet-name>
+    <servlet-class>com.xinxiang.week2.HelloServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!-- <servlet>
+       <servlet-name>LifeServlet</servlet-name>
+       <servlet-class>com.xinxiang.week3.LifeServlet</servlet-class>
+   </servlet>-->
+  <!--    <servlet>
+          <servlet-name>RegisterServlet</servlet-name>
+          <servlet-class>com.xinxiang.week3.RegisterServlet</servlet-class>
+      </servlet>-->
+  <!--    <servlet>
+          <servlet-name>JDBCDenoServlet</servlet-name>
+          <servlet-class>com.xinxiang.week4.JDBCDenoServlet</servlet-class>
+          <init-param>
+              <param-name>driver</param-name>
+              <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+          </init-param>
+          <init-param>
+              <param-name>url</param-name>
+              <param-value>jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false</param-value>
+          </init-param>
+          <init-param>
+              <param-name>username</param-name>
+              <param-value>sa</param-value>
+          </init-param>
+          <init-param>
+              <param-name>password</param-name>
+              <param-value>123456</param-value>
+          </init-param>
+          <load-on-startup>1</load-on-startup>
+      </servlet>-->
+  <servlet-mapping>
+    <servlet-name>Week2</servlet-name>
+    <url-pattern>/helloServlet</url-pattern>
+  </servlet-mapping>
+  <!--   <servlet-mapping>
+         <servlet-name>RegisterServlet</servlet-name>
+         <url-pattern>/register</url-pattern>
+     </servlet-mapping>-->
+  <!--      <servlet-mapping>
+          <servlet-name>JDBCDenoServlet</servlet-name>
+          <url-pattern>/JDBCDenoServlet</url-pattern>
+      </servlet-mapping>-->
+  <!-- <servlet-mapping>
+       <servlet-name>LifeServlet</servlet-name>
+       <url-pattern>/life</url-pattern>
+   </servlet-mapping>-->
+</web-app>
